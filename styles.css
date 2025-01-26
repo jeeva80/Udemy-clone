@@ -51,7 +51,9 @@ body {
     gap: 10px;
     align-items: center;
 }
-
+.navbar__s4{
+    display: none;
+}
 .my-learning {
     position: relative;
     cursor: pointer;
@@ -90,8 +92,8 @@ body {
 }
 
 .categories p:hover {
-background-color: transparent;
-transition: 1s;
+    background-color: transparent;
+    transition: 1s;
     color: black;
     border: solid #a435f0 1px;
 }
@@ -145,7 +147,9 @@ transition: 1s;
 
 .couse-card {
 
-    width: 250px;
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
 }
 
 .couse-card img {
@@ -204,4 +208,29 @@ transition: 1s;
     align-items: center;
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width:600px) {
+    body {
+        font-size: 10px;
+    }
+
+    .couse-card {
+        flex-basis: 40%;
+    }
+
+    .categories {
+        display: none;
+    }
+
+    .navbar__s2 {
+        display: none;
+    }
+
+    .navbar__s3 {
+        display: none;
+    }
+    .navbar__s4{
+        display: block;
+    }
 }
